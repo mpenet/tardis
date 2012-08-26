@@ -38,16 +38,16 @@ Some helpers:
 user> (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4")
 #<UUID 7feaa500-efc7-11e1-8a9b-0024d70cf6c4>
 
-user> (get-time (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"))
+user> (uuid->time (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"))
 9217361010808525281
 
-user> (get-time "7feaa500-efc7-11e1-8a9b-0024d70cf6c4")
+user> (uuid->time "7feaa500-efc7-11e1-8a9b-0024d70cf6c4")
 9217361010808525281
 
-(get-node "7feaa500-efc7-11e1-8a9b-0024d70cf6c4")
+user> (uuid->clockseq+node "7feaa500-efc7-11e1-8a9b-0024d70cf6c4")
 -8459167316858571068
 
-user> (get-clockseq+node (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"))
+user> (uuid->clockseq+node (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"))
 -8459167316858571068
 
 ```
