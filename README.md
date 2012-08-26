@@ -18,7 +18,7 @@ user> (non-unique-time-uuid)
 user> (non-unique-time-uuid (java.util.Date.))
 #<UUID 00000139-64f1-df3b-8a9b-0024d70cf6c4>
 
-;; it can take Long also
+;; it can take Longs also
 user> (non-unique-time-uuid (.getTime (java.util.Date.)))
 #<UUID 00000139-64f2-6dc8-8a9b-0024d70cf6c4>
 
@@ -33,7 +33,7 @@ Some helpers:
 
 ```clojure
 
-;; Convert from uuid instances
+;; Convert from strings and retrieve time
 
 user> (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4")
 #<UUID 7feaa500-efc7-11e1-8a9b-0024d70cf6c4>
@@ -47,7 +47,7 @@ user> (get-time "7feaa500-efc7-11e1-8a9b-0024d70cf6c4")
 (get-node "7feaa500-efc7-11e1-8a9b-0024d70cf6c4")
 -8459167316858571068
 
-user> (get-node (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"))
+user> (get-clockseq+node (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"))
 -8459167316858571068
 
 ```
