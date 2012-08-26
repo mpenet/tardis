@@ -1,7 +1,17 @@
 (ns tardis.core-test
   (:use clojure.test
-        tardis.core))
+        tardis.core)
+  (:import [java.util Date]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(def u (non-unique-time-uuid))
+
+(deftest test-non-unique
+  (is (= u (non-unique-time-uuid (get-time u)))))
+
+(deftest test-unique
+  (is (not= u (unique-time-uuid (get-time u)))))
+
+(deftest coerce
+  (is (non-unique-time-uuid (Date. (get-time u))))
+  (is (non-unique-time-uuid (.getDate (Date. (get-time u)))))
+  (is (= (from-string (str u)) u)))

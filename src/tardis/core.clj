@@ -3,10 +3,22 @@
 
 (def clockseq-and-node (UUIDGen/getClockSeqAndNode))
 
+(defprotocol PTimeConverter
+  (to-time [v]))
+
+(extend-protocol PTimeConverter
+
+  java.util.Date
+  (to-time [d]
+    (.getTime d))
+
+  Object
+  (to-time [v] v))
+
 (defn non-unique-time-uuid
   "Non unique as in composted of timestamp + node without added uniquess, so collisions could happen"
   ([time clockseq-and-node]
-     (UUID. time clockseq-and-node))
+     (UUID. (to-time time) clockseq-and-node))
   ([time]
      (non-unique-time-uuid time clockseq-and-node))
   ([]
@@ -15,7 +27,7 @@
 (defn unique-time-uuid
   "No collisions possible"
   ([time clockseq-and-node]
-     (UUID. (UUIDGen/createTime time) clockseq-and-node))
+     (UUID. (UUIDGen/createTime (to-time time)) clockseq-and-node))
   ([time]
      (unique-time-uuid time clockseq-and-node))
   ([]
@@ -27,7 +39,5 @@
 (defn get-node [^UUID uuid]
   (.getClockSeqAndNode uuid))
 
-;; (prn (time-uuid))
-;; (def t (time-uuid))
-;; (println t)
-;; (prn (= t (time-uuid (get-time t))))(ns tardis.core)
+(defn from-string [^String s]
+  (UUID. s))
