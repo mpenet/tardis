@@ -52,6 +52,6 @@ user> (get-node (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"))
 
 ## License
 
-Copyright © 2012 FIXME
+Copyright © 2012 Max Penet
 
 Distributed under the Eclipse Public License, the same as Clojure.
