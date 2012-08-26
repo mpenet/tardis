@@ -3,7 +3,9 @@
 Clojure library to manage Type 1 UUIDs (time based), wrapping
 com.eaio.uuid (meaning it is fast and reliable).
 
-Handles "unique" and "non-unique" uuids.
+Handles "unique", "non-unique" uuids and retrieval of composing values.
+
+[![Build Status](https://secure.travis-ci.org/mpenet/tardis.png?branch=master)](http://travis-ci.org/mpenet/tardis)
 
 ## Usage
 
