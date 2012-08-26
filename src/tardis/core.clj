@@ -4,9 +4,17 @@
 (def clockseq-and-node (UUIDGen/getClockSeqAndNode))
 
 (defprotocol PTimeConverter
-  (to-time [v]))
+  (to-time [v])
+  (to-uuid [v]))
 
 (extend-protocol PTimeConverter
+
+  String
+  (to-uuid [s]
+    (UUID. s))
+
+  UUID
+  (to-uuid [s] s)
 
   java.util.Date
   (to-time [d]
@@ -33,11 +41,8 @@
   ([]
      (unique-time-uuid (.getTime (java.util.Date.)))))
 
-(defn get-time [^UUID uuid]
-  (.getTime uuid))
+(defn get-time [v]
+  (.getTime ^UUID (to-uuid v)))
 
-(defn get-node [^UUID uuid]
-  (.getClockSeqAndNode uuid))
-
-(defn from-string [^String s]
-  (UUID. s))
+(defn get-node [v]
+  (.getClockSeqAndNode ^UUID (to-uuid v)))
