@@ -47,3 +47,6 @@
 
 (defn uuid->clockseq+node [v]
   (.getClockSeqAndNode ^UUID (to-uuid v)))
+
+(defmethod print-method UUID [uuid ^java.io.Writer w]
+  (.write w (str "#time-uuid \"" (str uuid) "\"")))
