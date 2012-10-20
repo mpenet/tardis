@@ -49,4 +49,4 @@
   (.getClockSeqAndNode ^UUID (to-uuid v)))
 
 (defmethod print-method UUID [uuid ^java.io.Writer w]
-  (.write w (str "#time-uuid \"" (str uuid) "\"")))
+  (.write w (str "#tardis/time-uuid \"" (str uuid) "\"")))
