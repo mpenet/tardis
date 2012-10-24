@@ -7,6 +7,10 @@ Handles "unique", "non-unique" uuids and retrieval of composing values.
 
 [![Build Status](https://secure.travis-ci.org/mpenet/tardis.png?branch=master)](http://travis-ci.org/mpenet/tardis)
 
+## Installation
+
+Add `[cc.qbits/tardis "0.2.0"]` in your project.clj
+
 ## Usage
 
 ```clojure
