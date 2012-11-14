@@ -9,12 +9,12 @@ Handles "unique", "non-unique" uuids and retrieval of composing values.
 
 ## Installation
 
-Add `[cc.qbits/tardis "0.2.0"]` in your project.clj
+Add `[cc.qbits/tardis "0.3.0"]` in your project.clj
 
 ## Usage
 
 ```clojure
-(use 'qbits.tardis.core)
+(use 'qbits.tardis.uuid)
 
 user> (non-unique-time-uuid)
 #tardis/time-uuid "00000139-64f1-0aa2-8a9b-0024d70cf6c4"
