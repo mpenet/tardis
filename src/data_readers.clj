@@ -1,1 +1,1 @@
-{tardis/time-uuid tardis.core/to-uuid}
+{qbits.tardis/time-uuid qbits.tardis.core/to-uuid}

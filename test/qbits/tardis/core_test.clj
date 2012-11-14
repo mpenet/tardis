@@ -1,6 +1,6 @@
-(ns tardis.core-test
+(ns qbits.tardis.core-test
   (:use clojure.test
-        tardis.core)
+        qbits.tardis.core)
   (:import [java.util Date]))
 
 (def u (non-unique-time-uuid))
