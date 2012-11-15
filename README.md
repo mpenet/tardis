@@ -14,7 +14,7 @@ Add `[cc.qbits/tardis "0.3.0"]` in your project.clj
 ## Usage
 
 ```clojure
-(use 'qbits.tardis.uuid)
+(use 'qbits.tardis)
 
 user> (non-unique-time-uuid)
 #tardis/time-uuid "00000139-64f1-0aa2-8a9b-0024d70cf6c4"
@@ -40,11 +40,11 @@ Some helpers:
 ;; Convert from strings and retrieve time
 
 user> #qbits.tardis/time-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"
-#tardis/time-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"
+#qbits.tardis/time-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"
 
 ;; the reader literal is aliased to this fn
 user> (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4")
-#tardis/time-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"
+#qbits.tardis/time-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"
 
 user> (uuid->time (to-uuid "7feaa500-efc7-11e1-8a9b-0024d70cf6c4"))
 9217361010808525281

@@ -1,4 +1,4 @@
-(ns qbits.tardis.uuid
+(ns qbits.tardis
   (:import [com.eaio.uuid UUID UUIDGen]))
 
 (def clockseq+node (UUIDGen/getClockSeqAndNode))
