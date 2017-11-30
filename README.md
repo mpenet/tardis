@@ -9,7 +9,7 @@ Handles "unique", "non-unique" uuids and retrieval of composing values.
 
 ## Installation
 
-Add `[cc.qbits/tardis "1.1.0"]` in your project.clj
+Add `[cc.qbits/tardis "1.1.1"]` in your project.clj
 
 ## Usage
 
