@@ -3,10 +3,8 @@
   :url "https://github.com/mpenet/tardis"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :repositories [["eaio.com" {:url "http://eaio.com/maven2/"
-                              :checksum :ignore}]]
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [com.eaio.uuid/uuid "3.4"]]
+                 [com.github.stephenc.eaio-uuid/uuid "3.4.0"]]
   :profiles {:1.4  {:dependencies [[org.clojure/clojure "1.4.0"]]}
              :1.5  {:dependencies [[org.clojure/clojure "1.6.0-master-SNAPSHOT"]]}
              :dev  {:dependencies []}
