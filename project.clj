@@ -1,4 +1,4 @@
-(defproject cc.qbits/tardis "1.1.0"
+(defproject cc.qbits/tardis "1.1.1"
   :description "Simple library to manage Type 1 UUIDs (time based)"
   :url "https://github.com/mpenet/tardis"
   :license {:name "Eclipse Public License"
